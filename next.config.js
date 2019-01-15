@@ -1,7 +1,8 @@
 require('@remy/envy');
 const webpack = require('webpack');
+const withSass = require('@zeit/next-sass')
 
-module.exports = {
+module.exports = withSass({
   webpack: config => {
     config.plugins.push(
       new webpack.EnvironmentPlugin(
@@ -10,4 +11,4 @@ module.exports = {
     );
     return config;
   },
-};
+});

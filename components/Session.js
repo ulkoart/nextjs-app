@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Rating from './Rating';
-import './Session.css';
+import './Session.scss';
 
 const Speaker = ({ speaker, twitter }) =>
   speaker ? (
@@ -18,7 +18,7 @@ export default ({title, description, slug, rating = false, ...props}) => (
         <a>{title}</a>
       </Link>
     </h2>
-    <p>{description}</p>    
+    <p>{description}</p>
     {rating && process.env.SHOW_SPEAKER && <Speaker {...props} />}
   </div>
 );
